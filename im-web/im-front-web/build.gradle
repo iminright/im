@@ -1,0 +1,13 @@
+apply plugin: 'war'
+apply plugin : 'eclipse-wtp'
+
+dependencies {
+	
+	compile project(':im-common-resource')
+	
+	compile project(':im-service')
+	
+	compile libraries.spring_web
+	
+	compile libraries.spring_webmvc
+}

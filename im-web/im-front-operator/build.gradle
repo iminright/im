@@ -1,0 +1,9 @@
+apply plugin: 'war'
+apply plugin : 'eclipse-wtp'
+
+dependencies {
+
+	compile project(':im-service')
+	
+	compile project(':im-common-resource')
+}

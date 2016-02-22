@@ -1,0 +1,29 @@
+apply from: 'libraries.gradle'
+
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'maven'
+
+        sourceCompatibility = '1.7'
+        targetCompatibility = '1.7'
+	
+	repositories {
+		mavenCentral()
+	}
+
+	eclipse {
+		classpath {
+			downloadSources=true
+		}
+	}
+
+	dependencies {
+		testCompile libraries.junit
+	}
+
+	task 'create-dirs' << {
+        	sourceSets*.java.srcDirs*.each { it.mkdirs() }
+        	sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+    	} 
+}

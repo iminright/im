@@ -1,0 +1,6 @@
+dependencies {
+
+	compile libraries.spring_context
+	
+	compile libraries.servlet_api
+}

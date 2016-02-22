@@ -1,0 +1,9 @@
+include ':im-common'
+
+include ':im-common-resource'
+
+include ':im-service'
+
+include ':im-dao'
+
+apply from : 'settings.im-web.gradle'
